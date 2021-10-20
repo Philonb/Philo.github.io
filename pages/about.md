@@ -2,7 +2,8 @@
 layout: page
 title: About
 description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+keywords: Wuti Peng, 彭武倜
+comment: true
 menu: 关于
 permalink: /about/
 ---
@@ -13,7 +14,26 @@ permalink: /about/
 
 ## 联系
 
-QQ:2272314673
+<ul>
+{% for website in site.data.social %}
+<li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
+{% endfor %}
+{% if site.url contains 'mazhuang.org' %}
+<li>
 
-博客：https://philonb.github.io/Philo.github.io
+
+
+## Skill Keywords
+
+{% for skill in site.data.skills %}
+
+### {{ skill.name }}
+
+<div class="btn-inline">
+{% for keyword in skill.keywords %}
+<button class="btn btn-outline" type="button">{{ keyword }}</button>
+{% endfor %}
+</div>
+
+{% endfor %}
 
