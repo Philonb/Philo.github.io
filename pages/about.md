@@ -3,7 +3,6 @@ layout: page
 title: About
 description: 打码改变世界
 keywords: Zhuang Ma, 马壮
-comments:
 menu: 关于
 permalink: /about/
 ---
@@ -14,10 +13,7 @@ permalink: /about/
 
 ## 联系
 
-<ul>
-{% for website in site.data.social %}
-<li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
-{% endfor %}
-{% if site.url contains 'philonb.github.io/Philo.github.io' %}
+QQ:2272314673
 
+博客：https://philonb.github.io/Philo.github.io
 
