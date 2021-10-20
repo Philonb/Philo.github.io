@@ -7,10 +7,10 @@ date_format: "ordinal"
 title: Philo Personal Blog
 subtitle: 
 description: "彭武倜的个人博客，QQ号：2272314673"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang, 闷骚的程序员
-timezone: Asia/Shanghai
+keywords: Philo Personal Blog, Wuti Peng, Philonb, pengwuti
+timezone: Asia/Beijing
 encoding: "utf-8"
-repository: mzlogin/mzlogin.github.io
+repository: Philonb/Philo.github.io
 # 对 css 和 js 资源的 cdn 加速配置
 cdn:
     jsdelivr:
