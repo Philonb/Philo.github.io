@@ -3,7 +3,7 @@ layout: page
 title: About
 description: 打码改变世界
 keywords: Wuti Peng, 彭武倜
-comment: true
+comment: false
 menu: 关于
 permalink: /about/
 ---
