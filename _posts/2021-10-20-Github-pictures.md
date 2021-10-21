@@ -8,7 +8,7 @@ keywords: PicGo, Github, 图片
 
   作为一个萌新，在写完第一个博客后就发现图片加载不出来（胡鸽鸽在网课中没讲），在网上寻找了一番找到了一个合理方便的让图片加载出来的
 
-# 通过github+picgo搭建图床来解决
+# 通过github+picgo搭建图床来解决(注意picgo是外国图床工具,仍然需要科学上网或者连接校园网加载图片)
 
 ## 1，创建Personal access token
 
