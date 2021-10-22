@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://philonb.github.io/Philo.github.io/
+url: https://philoblog.top
 date_format: "ordinal"
 title: Philo Personal Blog
 subtitle: 
