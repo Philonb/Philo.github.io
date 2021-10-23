@@ -133,14 +133,14 @@ gitment:
     owner: Philonb
     repo: blog-comments
     oauth:
-        client_id: af762cc0050b40184d0d
-        client_secret: a6edc42cc48a5ee229f50376c864e645a77f3a5a
+        client_id: d3dd280361ed0c37b4dc
+        client_secret: bc429f1dbbc368e776241d79c428d9ed7dfaf609
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: Philonb
     repo: blog-comments
-    clientID: af762cc0050b40184d0d
-    clientSecret: a6edc42cc48a5ee229f50376c864e645a77f3a5a
+    clientID: d3dd280361ed0c37b4dc
+    clientSecret: bc429f1dbbc368e776241d79c428d9ed7dfaf609
 # 在使用其它评论组件时可点击显示 Disqus
 lazy_load_disqus : false
 
