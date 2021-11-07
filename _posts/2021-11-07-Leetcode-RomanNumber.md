@@ -18,7 +18,8 @@ keywords: leetcode,刷题
 
   首先这一题先要求数组的元素个数，后面才好设计循环结构来将罗马数字变成阿拉伯数字  
 
-```int romanToInt(char * s)
+```c
+int romanToInt(char * s)
 {
     int n=0, ret=1, i=0, number=0;
     while(ret==1)
@@ -50,16 +51,13 @@ keywords: leetcode,刷题
             number += 1000;                             
             
         
+    }
+    return 0;
+    
+}
 ```
 
-```c
-}
-return 0;
-```
-
-}
-
-  这是我第一次写时一次性写出来的东西，写的真的很垃圾，然后代码执行出来是时间超出限制。
+  这是我第一次写时一次性写出来的东西，写的真的很垃圾，而且最后写的居然是return 0,然后代码执行出来是时间超出限制。
 
 ![1](https://i.loli.net/2021/11/07/xOARrv14LW2CtgE.png)
 
@@ -67,7 +65,8 @@ return 0;
 
   因此我就先把后面的计算过程都删了，来先看求数组元素个数是否出错
 
-```int romanToInt(char * s)
+```c
+int romanToInt(char * s)
 {
     int n=0, ret=1, i=0, number=0;
     while(ret==1)
@@ -78,6 +77,7 @@ return 0;
     
     return n;
 }
+
 ```
 
 ![2](https://i.loli.net/2021/11/07/YBoGmDS9hPvcNxe.png)
@@ -100,7 +100,8 @@ return 0;
 
   这个地方难点是4,9等这样的数字。把I放在V的左边是5-1=4而不是5+1=6。在题目中把所有的这种情况都列出来了，在循环中单独列出来就行然后把加改成减就行。
 
-```int romanToInt(char * s)
+```c
+int romanToInt(char * s)
 {
     int n=0, i=0, number=0;
     while(s[n]!='\0')
