@@ -3,10 +3,10 @@ layout: post
 title: 免费VPS(Heroku)申请，自搭v2ray科学上网
 categories: 科学上网
 description: 申请免费的VPS，自搭v2ray翻墙
-keywords: 科学上网，Heroku
+keywords: 科学上网，Heroku 
 ---
 
-  # 利用Heroku免费vps自搭v2ray科学上网
+# 利用Heroku免费vps自搭v2ray科学上网
 
   自从开始使用github后，我就一直在找各种科学上网的方法。这次就学会了在Heroku免费申请vps。
 
