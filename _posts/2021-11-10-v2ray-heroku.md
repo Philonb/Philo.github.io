@@ -122,7 +122,7 @@ keywords: 科学上网，Heroku
 
 ## 5，在v2ray中添加刚刚建好的vps
 
-点击服务器，添加VMess服务器，地址粘贴刚刚复制的网址同时去掉最前面的https://和最后一个/，端口打443，ID在heroku网页中。找到config vars一栏点击reveal config vars复制ID到v2ray中。额外ID不用和加密方式不用改，别名随你自己，不如我是第二个节点就命名为heroku 2。传输协议选择ws，伪装域名和类型都不用打，路径改成/。底层传输安全选择tls，跳过安全证书验证选择true。点击确定。
+点击服务器，添加VMess服务器，地址粘贴刚刚复制的网址同时去掉最前面的https://和最后一个/，端口打443，ID在heroku网页中。找到config vars一栏点击reveal config vars复制ID到v2ray中。额外ID不用和加密方式不用改，别名随你自己，比如我是第二个节点就命名为heroku 2。传输协议选择ws，伪装域名和类型都不用打，路径改成/。底层传输安全选择tls，跳过安全证书验证选择true。点击确定。
 
 ![](https://pic.imgdb.cn/item/618bee7c2ab3f51d9118c669.png)
 
