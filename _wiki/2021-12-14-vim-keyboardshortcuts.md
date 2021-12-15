@@ -1,10 +1,9 @@
 ---
 layout: wiki
 title: "vim快捷键"
-categories: Linux
-description: vim的快捷键
-keywords:vim ,shortcuts,快捷键
 ---
+
+
 
 | 0        | 数字0，移到光标所在行的行首              |
 | -------- | ---------------------------------------- |
