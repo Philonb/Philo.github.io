@@ -6,8 +6,9 @@ description: shell命令的快捷键
 keywords: shell,keyboardshortcuts,快捷键
 ---
 
-| ctrl+a   | 跳到命令行首                                       |
+| 快捷键   | 作用                                               |
 | -------- | -------------------------------------------------- |
+| ctrl+a   | 跳到命令行首                                       |
 | ctrl+e   | 跳到命令行尾                                       |
 | ctrl+u   | 删除光标至命令行首的内容                           |
 | ctrl + k | 删除光标至命令行尾的内容                           |
