@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: "vim快捷键"
-categories: vim
+categories: Linux
 description: vim的快捷键
 keywords:vim ,shortcuts,快捷键
 ---
