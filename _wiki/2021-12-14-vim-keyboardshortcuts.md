@@ -1,6 +1,9 @@
 ---
 layout: wiki
 title: "vim快捷键"
+categories: vim
+description: vim keyboardshortcuts
+keywords: vim,keyboardshortcuts,快捷键
 ---
 
 
