@@ -2,14 +2,14 @@
 layout: wiki
 title: "vim快捷键"
 categories: vim
-description: vim keyboardshortcuts
 keywords: vim,keyboardshortcuts,快捷键
 ---
 
 
 
-| 0        | 数字0，移到光标所在行的行首              |
+| 快捷键   | 作用                                     |
 | -------- | ---------------------------------------- |
+| 0        | 数字0，移到光标所在行的行首              |
 | $        | 移到光标所在行的行尾                     |
 | gg       | 移到文首                                 |
 | GG       | 移到文尾                                 |

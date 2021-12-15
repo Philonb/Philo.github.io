@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: "shell命令行快捷键"
-categories: shell
+categories: Shell
 description: shell命令的快捷键
 keywords: shell,keyboardshortcuts,快捷键
 ---
