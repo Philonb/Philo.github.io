@@ -1,10 +1,4 @@
----
-layout: post
-title: "Docker初体验和LNMP的搭建"
-categories: Docker LNMP
-description: 在腾讯云实验室进行的Docker初次学习，并按照步骤搭建了LNMP环境
-keywords: Docker,LNMP,腾讯云实验室
----
+
 
 ## Docker搭建LNMP实验
 
@@ -220,3 +214,112 @@ pg_close($dbconn);
 ![](https://pic.imgdb.cn/item/623175c65baa1a80abca5fd4.png)
 
 测试结束，到这整个一套流程就结束了
+
+
+
+做完实验后，我想自己在电脑的虚拟机vm Linux上试一下，然后vm提示更新，我更新了。结果电脑就出问题了，桌面一直无限刷新，cpu直接跑满。搞了几个小时搞好后，vm 里的Linux启动不了了。我就删了vm准备用wsl，结果电脑装wsl也出问题，一直报错。(我在室友电脑上帮他装好了wsl2，但我自己电脑上却装不好，新版自动安装和旧版手动安装都试过)。现在呢甚至vm安装包都打不开。我的电脑系统一定是出了什么问题，做完最近的作业就重装系统。
+
+---
+
+## 不使用Docker搭建LNMP
+
+![](https://pic.imgdb.cn/item/6231c2865baa1a80ab06c2cf.png)
+
+这个实验是在cenots下完成的，我想跟ubuntu下也差不多，无非是yum变成apt
+
+### 搭建Nginx静态服务器
+
+#### 安装Nginx
+
+![](https://pic.imgdb.cn/item/6231c32b5baa1a80ab07dd4a.png)
+
+在cenots中是使用yum安装nginx，并且不需要sudo，-y放在了最后面
+
+#### 修改配置
+
+![](https://pic.imgdb.cn/item/6231c4d75baa1a80ab0b42c8.png)
+
+打开 /ect/nginx/conf.d/default.conf去除对IPv6的监听，修改成一下代码
+
+```bash
+server {
+    listen       80 default_server;
+    # listen       [::]:80 default_server;
+    server_name  _;
+    root         /usr/share/nginx/html;
+
+    # Load configuration files for the default server block.
+    include /etc/nginx/default.d/*.conf;
+
+    location / {
+    }
+
+    error_page 404 /404.html;
+        location = /40x.html {
+    }
+
+    error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+    }
+
+}
+```
+
+实际上只需修改第三行：在listen前面加个#
+
+#### 启动Nginx
+
+![](https://pic.imgdb.cn/item/6231c5f75baa1a80ab0d5906.png)
+
+输入nginx直接可以启动nginx，使用chkconfig打开nginx的开机自动启动
+
+#### 安装MySQL
+
+![](https://pic.imgdb.cn/item/6231c68e5baa1a80ab0e793a.png)
+
+安装都大同小异，只要知道要安装的东西的名字，使用yum install 名字就可以。 安装好之后设置开机自动启动，重启mysql并设置root密码。
+
+### 搭建PHP环境
+
+#### 安装PHP
+
+![](https://pic.imgdb.cn/item/6231c7645baa1a80ab1010cc.png)
+
+这里grep命令用于查找文件里符合条件的字符串
+
+![](https://pic.imgdb.cn/item/6231c8255baa1a80ab1155d3.png)
+
+### 配置Nginx并运行PHP程序
+
+#### 配置php.conf
+
+![](https://pic.imgdb.cn/item/6231c8935baa1a80ab120c2d.png)
+
+```
+server {
+    listen 8000;
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    location ~ \.php$ {
+        root           /usr/share/php;
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+}
+```
+
+listen是监听的意思，listen 8000即监听8000端口
+
+#### 重启nginx
+
+![](https://pic.imgdb.cn/item/6231c90e5baa1a80ab12e161.png)
+
+#### 配置info.php
+
+![](https://pic.imgdb.cn/item/6231c9665baa1a80ab13757f.png)
+
+在使用Docker的实验中也有这一步
+
+做完这一步，不依赖Docker的LNMP就搭建好了
+
